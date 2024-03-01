@@ -1,7 +1,7 @@
 # PoissonSolver
 
 ## Introduction
-<img src="results/vecteurPropreLogo.png" width="300" align="right">
+<img src="results/vecteurPropreLogo.png" width="200" align="right">
 This project presents a numerical solution to the two-dimensional Poisson equation using a C program. The solution involves defining arbitrary membrane shapes, discretizing the domain, and employing a Multi-Grid method for iterative problem-solving. Further, the project explores the optimization of the algorithm through a relaxation parameter and enhances solver performance using a Multi-Grid preconditioner with the PRIMME solver.
 
 ## Program Structure
@@ -14,7 +14,7 @@ The program is structured into 20 files, each dedicated to specific functions. T
 
 ## Discretization
 The project involves solving the Poisson equation for a given membrane $\Omega \subset \mathbb{R}^2$, with boundary conditions specified on $\partial \Omega$. The domain is discretized, and the solution $u$ at each grid point is approximated using the finite difference method, leading to a linear system $Au = b$.
-<img src="results/discretisation_domaine.png" width="200" align="left">
+<img src="results/discretisation_domaine.png" width="150" align="left">
 
 ## Multi-Grid Method
 The Multi-Grid method enhances solution convergence through pre-/post-smoothing iterations and corrections on coarser grids. The method's effectiveness and the impact of various smoothing iterations on convergence are demonstrated.
