@@ -25,10 +25,6 @@ The Multi-Grid method enhances solution convergence through pre-/post-smoothing 
 ## Preconditioning with Multi-Grid
 The use of a Multi-Grid preconditioner with the PRIMME solver for eigenvalue problems showcases significant improvements in solver performance.
 
-<img src="results/discretisation_domaine.png" width="400" align="center">
-
-<img src="results/solutionP15" width="400" align="center">
-
 
 ## Conclusion
 The project effectively demonstrates the application of the Multi-Grid method to solve the 2D Poisson equation and optimize eigenvalue problem solving with the PRIMME solver.
