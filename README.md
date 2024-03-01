@@ -13,8 +13,8 @@ The program is structured into 20 files, each dedicated to specific functions. T
 - **The fourth option** employs the *PRIMME solver* to tackle an eigenvalue problem, with the *multi-grid preconditioner* enhancing the solver's convergence rate.
 
 ## Discretization
-The project involves solving the Poisson equation for a given membrane $\Omega \subset \mathbb{R}^2$, with boundary conditions specified on $\partial \Omega$. The domain is discretized, and the solution $u$ at each grid point is approximated using the finite difference method, leading to a linear system $Au = b$.
 <img src="results/discretisation_domaine.png" width="300" align="left">
+The project involves solving the Poisson equation for a given membrane $\Omega \subset \mathbb{R}^2$, with boundary conditions specified on $\partial \Omega$. The domain is discretized, and the solution $u$ at each grid point is approximated using the finite difference method, leading to a linear system $Au = b$.
 
 ## Multi-Grid Method
 The Multi-Grid method enhances solution convergence through pre-/post-smoothing iterations and corrections on coarser grids. The method's effectiveness and the impact of various smoothing iterations on convergence are demonstrated.
