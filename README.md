@@ -1,5 +1,9 @@
 # PoissonSolver
-
+<p float="left">
+  <img src="/solFinaleCercle" width="100" />
+  <img src="/residuMultiGridP8_m641" width="100" /> 
+  <img src="/results/solutionP15.png" width="100" />
+</p>
 
 ## Introduction
 This project presents a numerical solution to the two-dimensional Poisson equation using a C program. The solution involves defining arbitrary membrane shapes, discretizing the domain, and employing a Multi-Grid method for iterative problem-solving. Further, the project explores the optimization of the algorithm through a relaxation parameter and enhances solver performance using a Multi-Grid preconditioner with the PRIMME solver.
