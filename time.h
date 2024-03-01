@@ -1,0 +1,1 @@
+double mytimer(void);
