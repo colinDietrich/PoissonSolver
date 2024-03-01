@@ -1,8 +1,8 @@
 # PoissonSolver
 <p float="left">
-  <img src="/solFinaleCercle" width="100" />
-  <img src="/residuMultiGridP8_m641" width="100" /> 
-  <img src="/results/solutionP15.png" width="100" />
+  <img src="/results/solFinaleCercle.png" width="100" align="left/>
+  <img src="/results/residuMultiGridP8_m641.png" width="100" align="left" /> 
+  <img src="/results/solutionP15.png" width="100" align="right"/>
 </p>
 
 ## Introduction
