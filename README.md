@@ -18,8 +18,8 @@ The project involves solving the Poisson equation for a given membrane $\Omega \
 $$
     \begin{cases} 
     \begin{aligned}
-    -\Delta u &= 0 \;\; &&\text{dans} \;\; \Omega \subset \mathbb{R}^2
-    \\ u &= e^{\sqrt{x^2+y^2}} \;\; &&\text{sur} \;\; \partial \Omega
+    -\Delta u &= 0 \;\; &&\text{on} \;\; \Omega \subset \mathbb{R}^2\\ 
+    u &= e^{\sqrt{x^2+y^2}} \;\; &&\text{sur} \;\; \partial \Omega\\
     \end{aligned}
     \end{cases}
 $$
