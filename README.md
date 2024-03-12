@@ -23,8 +23,6 @@ $$
     \end{cases}
 $$
 
-The domain is discretized with a discretization step $h = \frac{L}{m-1}$ where $L$ is the length of one side of the square membrane and $m$ is the number of points aligned in one direction of the grid. Thus, each of the grid points is defined as follows:
-
 
 ## Multi-Grid Method
 <figure>
