@@ -27,7 +27,9 @@ $$
 The domain is discretized with a discretization step $h = \frac{L}{m-1}$ where $L$ is the length of one side of the square membrane and $m$ is the number of points aligned in one direction of the grid. Thus, each of the grid points is defined as follows:
 
 $$
-    (x_i,y_j) = (ih,jh) \text{with} i,j = 1,...,m-2
+\begin{aligned}
+    (x_i,y_j) &= (ih,jh) &&\text{with} &&&i,j = 1,...,m-2
+\end{aligned}
 $$
 
 The approximation of the solution $u$ is calculated at each of the points belonging to the interior of the domain $\Omega$ according to the finite difference:
