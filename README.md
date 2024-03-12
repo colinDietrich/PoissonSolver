@@ -2,7 +2,7 @@
 
 ## Introduction
 <img src="results/vecteurPropreLogo.png" width="200" align="right">
-This project presents a numerical solution to the two-dimensional Poisson equation using a C program. The solution involves defining arbitrary membrane shapes, discretizing the domain, and employing a Multi-Grid method for iterative problem-solving. Further, the project explores the optimization of the algorithm through a relaxation parameter and enhances solver performance using a Multi-Grid preconditioner with the <a></ahref="https://www.cs.wm.edu/~andreas/software/">PRIMME</a> solver.
+This project presents a numerical solution to the two-dimensional Poisson equation using a C program. The solution involves defining arbitrary membrane shapes, discretizing the domain, and employing a Multi-Grid method for iterative problem-solving. Further, the project explores the optimization of the algorithm through a relaxation parameter and enhances solver performance using a Multi-Grid preconditioner with the <a href="https://www.cs.wm.edu/~andreas/software/">PRIMME</a> solver.
 
 ## Program Structure
 The program is structured into 20 files, each dedicated to specific functions. The main file, `main.c`, offers four distinct options:
