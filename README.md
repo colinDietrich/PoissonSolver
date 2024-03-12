@@ -15,6 +15,15 @@ The program is structured into 20 files, each dedicated to specific functions. T
 ## Discretization
 The project involves solving the Poisson equation for a given membrane $\Omega \subset \mathbb{R}^2$, with boundary conditions specified on $\partial \Omega$. The domain is discretized, and the solution $u$ at each grid point is approximated using the finite difference method, leading to a linear system $Au = b$.
 
+$$
+    \begin{cases} 
+    \begin{aligned}
+    -\Delta u &= 0 \;\; &&\text{dans} \;\; \Omega \subset \mathbb{R}^2
+    \\ u &= e^{\sqrt{x^2+y^2}} \;\; &&\text{sur} \;\; \partial \Omega
+    \end{aligned}
+    \end{cases}
+$$
+
 ## Multi-Grid Method
 <figure>
   <img src="results/P8_twoGrid_differentSmoothing.png" width="400" align="center">
