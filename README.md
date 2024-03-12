@@ -14,6 +14,7 @@ The program is structured into 20 files, each dedicated to specific functions. T
 
 ## Discretization
 The project involves solving the Poisson equation for a given membrane $\Omega \subset \mathbb{R}^2$, with Dirichlet boundary conditions specified on $\partial \Omega$.
+$$\begin{cases}\begin{aligned} -\Delta u &= 0 &&\text{on} \Omega \subset \mathbb{R}^2\\ u &= e^{\sqrt{x^2+y^2}} &&\text{on} \partial \Omega\\ \end{aligned}\end{cases}$$
 
 ## Multi-Grid Method
 <figure>
