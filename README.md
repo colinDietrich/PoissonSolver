@@ -47,16 +47,22 @@ $$
 
 where $b$ is a null vector to which Dirichlet boundary conditions have been added.
 
-## Multi-Grid Method
-<figure>
-  <img src="results/P8_twoGrid_differentSmoothing.png" width="400" align="center">
-  <figcaption>Convergence of the Two-Grid Method for Residuals Based on the Number of Pre- and Post-Smoothing Iterations (641 Discretization Points)
-</figure>
-The Multi-Grid method enhances solution convergence through pre-/post-smoothing iterations and corrections on coarser grids. The method's effectiveness and the impact of various smoothing iterations on convergence are demonstrated.
+## Multi-Grid Method Algorithm
 
-## Preconditioning with Multi-Grid
-The use of a Multi-Grid preconditioner with the PRIMME solver for eigenvalue problems showcases significant improvements in solver performance.
+```pseudo
+FOR i = 0 to N
+    - Apply ν1 pre-smoothing passes on A1u = b -> u1
+    - Reduce the residue r2 = R1(b - A1u1)
+        - Apply ν1 pre-smoothing passes on A2c = r2 -> c2
+        - Reduce the residue r3 = R2(r2 - A2c2)
+            - Apply ν1 pre-smoothing passes on A3c = r3 -> c3
+            - Reduce the residue r4 = R3(r3 - A3c3)
+                - Solve on the coarse grid: c4 = A4^(-1)r4
+            - Prolong the correction: c3_tilde = c3 + P3c4
+            - Apply ν2 post-smoothing passes on A3c = r3 -> c3'
+        - Prolong the correction: c2_tilde = c2 + P2c3'
+        - Apply ν2 post-smoothing passes on A2c = r2 -> c2'
+    - Prolong the correction: u1_tilde = u1 + P1c2'
+    - Apply ν2 post-smoothing passes on A1u = b -> u1'
+END FOR
 
-
-## Conclusion
-The project effectively demonstrates the application of the Multi-Grid method to solve the 2D Poisson equation and optimize eigenvalue problem solving with the PRIMME solver.
