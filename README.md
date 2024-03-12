@@ -18,11 +18,32 @@ The project involves solving the Poisson equation for a given membrane $\Omega \
 $$
 \begin{cases}
   \begin{aligned} 
-    -\Delta u &= 0 &&\text{on} \Omega \subset \mathbb{R}^2\\ 
-    u &= e^{\sqrt{x^2+y^2}} &&\text{on} \partial \Omega\\ 
+    -\Delta u &= 0 &&\text{on} &&&\Omega \subset \mathbb{R}^2\\ 
+    u &= e^{\sqrt{x^2+y^2}} &&\text{on} &&&\partial \Omega\\ 
   \end{aligned}
 \end{cases}
 $$
+
+The domain is discretized with a discretization step $h = \frac{L}{m-1}$ where $L$ is the length of one side of the square membrane and $m$ is the number of points aligned in one direction of the grid. Thus, each of the grid points is defined as follows:
+
+$$
+    (x_i,y_j) = (ih,jh) \text{with} i,j = 1,...,m-2
+$$
+
+The approximation of the solution $u$ is calculated at each of the points belonging to the interior of the domain $\Omega$ according to the finite difference:
+
+$$
+    \frac{4u_{i,j} - u_{i+1,j} - u_{i-1,j} - u_{i,j+1} - u_{i,j-1}}{h^2} = 0 + \mathcal{O}(h^2)
+$$
+
+where the edges of the domain are not taken into account because $u$ is already known there due to Dirichlet boundary conditions.
+By gathering all the equations, we obtain the following linear system:
+
+$$
+    Au = b
+$$
+
+where $b$ is a null vector to which Dirichlet boundary conditions have been added.
 
 ## Multi-Grid Method
 <figure>
