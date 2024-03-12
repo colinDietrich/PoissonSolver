@@ -48,12 +48,13 @@ $$
 where $b$ is a null vector to which Dirichlet boundary conditions have been added.
 
 ## Multi-Grid Method Algorithm
-The multi-grid method is an efficient numerical approach for solving differential equations, leveraging multiple levels of grid resolution. The core idea behind the two-grid algorithm is to perform most computational steps inexpensively, with the exception of solving with the UMFPACK direct solver on the coarse grid. The multi-grid method enhances this by iteratively applying pre-smoothing and post-smoothing on progressively coarser grids (each new coarse grid doubles the discretization step of the old grid, \(h_{new} = 2 h_{old}\)), until a grid is coarse enough for the problem \(u_c = A_c^{-1} r_c\) to be solved directly, significantly reducing computational costs.
+The **multi-grid method** is an efficient numerical approach for solving differential equations, leveraging multiple levels of grid resolution. The core idea behind the two-grid algorithm is to perform most computational steps inexpensively, with the exception of solving with the <a href="https://people.engr.tamu.edu/davis/research.html">UMFPACK</a> direct solver on the coarse grid. The multi-grid method enhances this by iteratively applying pre-smoothing and post-smoothing on progressively coarser grids (each new coarse grid doubles the discretization step of the old grid, $h_{new} = 2 h_{old}$, until a grid is coarse enough for the problem $u_c = A_c^{-1} r_c$ to be solved directly, significantly reducing computational costs.
 
 However, this method involves certain trade-offs. Moving to coarser grids and employing direct solvers decreases execution costs, but successive corrections and prolongations (interpolating solutions from coarser to finer grids) can decelerate the algorithm's convergence. Moreover, the efficacy of direct solutions on coarser grids lessens as the discretization step increases, leading to less effective error correction at lower frequencies. This results in a slower convergence rate of the multi-grid algorithm as the number of levels increases, a phenomenon observable in convergence studies.
 
 In this specific case, the **Gauss-Seidel symmetric** iterative method is chosen for pre-smoothing and post-smoothing phases.
 
+The algorithm follows these steps :
 ```pseudo
 FOR i = 0 to N
     - Apply ν1 pre-smoothing on A1u = b -> u1
